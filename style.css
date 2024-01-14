@@ -1,21 +1,25 @@
 :root {
-	--main-bgc: #333;
-	--text-color: #999;
+	--main-bgc: #222;
+	--text-color: #aaa;
 	--text-color-hover: #777;
-	--block-color: #444;
+	--block-color: #333;
+	--block-border-radius: 10px;
 	--transition-time: .15s;
+	--hover-opacity: 0.7;
+	--badge-border-radius: 6px;
 	
 	--border-width-between-blocks: 2px;
 	--border-color-between-blocks: var(--main-bgc);
 	
-	--header-panel-bgc: #1d1d1d;
-	--header-panel-btns-color: var(--main-bgc);
+	--header-panel-bgc: var(--main-bgc);
+	--header-panel-btns-color: var(--block-color);
+	--header-panel-btns-hover-opacity: var(--hover-opacity);
 	
 	--page-controls-bgc: var(--block-color);
 	--page-controls-btns-color: var(--main-bgc);
 	--page-controls-btns-border-radius: 18px;
 	--page-controls-text-color: var(--text-color);
-	--page-controls-btns-hover-opacity: 0.7;
+	--page-controls-btns-hover-opacity: var(--hover-opacity);
 	
 	--subject-card-bgc: var(--block-color);
 	--subject-card-text-color: var(--text-color);
@@ -24,14 +28,17 @@
 	--links-hover-color: var(--main-bgc);
 	
 	--notify-hover-color: var(--main-bgc);
+	
+	--progress-icon-width: 4px;
+	--progress-info-padding: 2px 15px;
 }
 
-/* Main block */ 
+ /*Main block */
 .x756ca__ui-page-wrapper, .xe0a46__ui-page-wrapper {
 	background-color: var(--main-bgc);
 }
 
-/* Top panel */
+ /*Top panel */
 .xa078a__top-panel {
 	background-color: var(--header-panel-bgc);
 }
@@ -47,6 +54,10 @@
 .x2c6ec__button {
 	background-color: var(--header-panel-btns-color);
 }
+.x2c6ec__button:hover {
+	opacity: var(--header-panel-btns-hover-opacity);
+	background-color: var(--header-panel-btns-color) !important;
+}
 
 .x2c6ec__button svg * {
 	fill: var(--subject-card-text-color);
@@ -55,10 +66,10 @@
 .xb4418__counter-wrapper {
 	box-shadow: none;
 	border: 2px solid var(--text-color);
-	/*background-color: var(--header-panel-btns-color);*/
+	background-color: var(--header-panel-btns-color);
 }
 
-/* Subject card */
+ /*Subject card */
 .x69e9f__container {
 	background-color: var(--subject-card-bgc);
 }
@@ -70,11 +81,12 @@
 .xda0d8__badge_type_default {
 	background-color: var(--subject-card-text-color);
 	color: var(--subject-card-bgc);
+	border-radius: var(--badge-border-radius);
 }
 
-/* Page controls (middle panel) */
+ /*Page controls (middle panel) */
 
-.xe0a46__controls {
+.xe0a46__controls, .x0c84e__controls {
 	background-color: var(--page-controls-bgc);
 }
 
@@ -91,8 +103,8 @@
 
 .x28bf6__search:after {
 	background: var(--text-color);
-	-webkit-mask-image: url(https://learn.ispring.institute/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
-    mask-image: url(https://learn.ispring.institute/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
+	-webkit-mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
+    mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
 }
 
 .xc1036__tab-control:hover {
@@ -101,12 +113,12 @@
 	opacity: var(--page-controls-btns-hover-opacity);
 }
 
-/* logo */
+ /*logo */
 .xc3ede__color-top-panel-text-default {
 	fill: var(--text-color);
 }
 
-/* links container */
+ /*links container */
 .xc935d__container {
 	background-color: var(--block-color);
 }
@@ -125,7 +137,7 @@
 	background-color: var(--links-hover-color);
 }
 
-/* Notify containter */
+ /*Notify containter */
 .x582c4__popup {
 	background-color: var(--main-bgc);
 }
@@ -138,6 +150,10 @@
 	background-color: var(--main-bgc);
 }
 
+.x34335__subheader svg * {
+	fill: var(--text-color);
+}
+
 .xce052__item {
 	border-block-end: none;
 }
@@ -146,7 +162,9 @@
 	background-color: var(--notify-hover-color);
 }
 
-/* Profile containter */
+
+
+ /*Profile containter */
 .x9e3f5__container {
 	background-color: var(--block-color);
 }
@@ -161,4 +179,60 @@
 
 .x65280__border {
 	background-color: var(--block-color);
+}
+
+/* Subject page */
+.x53ed8__section {
+	overflow: hidden;
+	background-color: var(--main-bgc);
+	border-radius: var(--block-border-radius);
+}
+
+.x78237__module {
+	background-color: var(--block-color);
+	transition: opacity var(--transition-time);
+}
+
+.x78237__module:hover {
+	background-color: var(--block-color);
+	opacity: var(--hover-opacity);
+}
+
+
+.x78237__module:hover  {
+	background-color: var(--block-color);
+	opacity: var(--hover-opacity);
+}
+
+.x78237__module * {
+	color: var(--text-color);
+}
+
+.x78237__module:hover * {
+	color: var(--text-color) !important;
+}
+
+.x78237__content {
+	border-block-end: none !important;
+}
+
+.x78237__title {
+	font-weight: bold;
+}
+
+/* progress icon */
+.xfed31__in-progress-icon * {
+	stroke-width: var(--progress-icon-width);
+}
+
+.xfed31__background {
+	stroke: var(--text-color) !important;
+}
+
+.xed2c2__text, .x78237__module:hover .xed2c2__text {
+	display: inline-block;
+	padding: var(--progress-info-padding);
+	background-color: var(--text-color);
+	color: var(--block-color) !important;
+	border-radius: var(--badge-border-radius);
 }
