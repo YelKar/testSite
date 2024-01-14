@@ -34,6 +34,6 @@ function toggleVideo(video) {
 
 // include css
 let style = document.createElement("style");
-style.rel = "stylesheet";
-style.href = "https://yelkar.github.io/testSite/style.css";
+style.setAttribute("rel", "stylesheet");
+style.setAttribute("href", "https://yelkar.github.io/testSite/style.css");
 document.body.appendChild(style);
