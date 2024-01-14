@@ -33,7 +33,7 @@ function toggleVideo(video) {
 }
 
 // include css
-let style = document.createElement("style");
+let style = document.createElement("link");
 style.setAttribute("rel", "stylesheet");
 style.setAttribute("href", "https://yelkar.github.io/testSite/style.css");
 document.body.appendChild(style);
