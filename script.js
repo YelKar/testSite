@@ -31,3 +31,9 @@ function toggleVideo(video) {
     if (video.paused) video.play();
     else if (video.played) video.pause();
 }
+
+// include css
+let style = document.createElement("style");
+style.rel = "stylesheet";
+style.href = "https://yelkar.github.io/testSite/style.css";
+document.body.appendChild(style);
