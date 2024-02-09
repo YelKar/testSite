@@ -102,7 +102,7 @@
     transition: opacity var(--transition-time);
 }
 
-.x28bf6__search:after {
+x6ddd2__search:after {
     background: var(--text-color);
     -webkit-mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
     mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
