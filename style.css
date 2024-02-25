@@ -33,12 +33,12 @@
     --progress-info-padding: 2px 15px;
 }
 
-/* Main block */
+ /*Main block */
 .x756ca__ui-page-wrapper, .xe0a46__ui-page-wrapper {
     background-color: var(--main-bgc);
 }
 
-/* Top panel */
+ /*Top panel */
 .xa078a__top-panel {
     background-color: var(--header-panel-bgc);
 }
@@ -47,7 +47,7 @@
     color: var(--text-color);
 }
 
-.x1fe92__navigation-item_selected * {
+.x1fe92__navigation-item_selected *, .x1fe92__navigation-item:hover * {
     color: var(--text-color-hover) !important;
 }
 
@@ -70,7 +70,7 @@
     background-color: var(--header-panel-btns-color);
 }
 
-/* Subject card */
+ /*Subject card */
 .x69e9f__container {
     background-color: var(--subject-card-bgc);
 }
@@ -85,7 +85,7 @@
     border-radius: var(--badge-border-radius);
 }
 
-/* Page controls (middle panel) */
+ /*Page controls (middle panel) */
 
 .xe0a46__controls, .x0c84e__controls {
     background-color: var(--page-controls-bgc);
@@ -102,7 +102,7 @@
     transition: opacity var(--transition-time);
 }
 
-x6ddd2__search:after {
+.x6ddd2__search:after {
     background: var(--text-color);
     -webkit-mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
     mask-image: url(/app/assets/learn-user-portal/css/res/search-icon_aaaa27a6.svg);
@@ -114,12 +114,12 @@ x6ddd2__search:after {
     opacity: var(--page-controls-btns-hover-opacity);
 }
 
-/* logo */
+ /*logo */
 .xc3ede__color-top-panel-text-default {
     fill: var(--text-color);
 }
 
-/* links container */
+ /*links container */
 .xc935d__container {
     background-color: var(--block-color);
 }
@@ -138,7 +138,7 @@ x6ddd2__search:after {
     background-color: var(--links-hover-color);
 }
 
-/* Notify containter */
+ /*Notify containter */
 .x582c4__popup {
     background-color: var(--main-bgc);
 }
@@ -165,7 +165,7 @@ x6ddd2__search:after {
 }
 
 
-/* Profile containter */
+ /*Profile containter */
 .x9e3f5__container {
     background-color: var(--block-color);
 }
@@ -183,7 +183,7 @@ x6ddd2__search:after {
     background-color: var(--block-color);
 }
 
-/*  Subject page */
+  /*Subject page */
 .x53ed8__section {
     overflow: hidden;
     background-color: var(--main-bgc);
@@ -222,7 +222,7 @@ x6ddd2__search:after {
     font-weight: bold;
 }
 
-/* progress icon */
+ /*progress icon */
 .xfed31__in-progress-icon * {
     stroke-width: var(--progress-icon-width);
 }
